@@ -40,11 +40,12 @@
             width: 100%;
             background: LightGray;
             /* Only change code below this line */
-    
+            display: grid;
     
             /* Only change code above this line */
         }
     </style>
+    <!-- comment -->
     
     <div class="container">
         <div class="d1">1</div>
@@ -94,7 +95,7 @@
             background: LightGray;
             display: grid;
             /* Only change code below this line */
-    
+            grid-template-columns: 100px 100px 100px;
     
             /* Only change code above this line */
         }
@@ -107,7 +108,6 @@
         <div class="d4">4</div>
         <div class="d5">5</div>
     </div>
-
     <!-- 3. Add Rows with grid-template-rows
 
     The grid you created in the last challenge will set the number of rows automatically. To adjust the rows manually, use the grid-template-rows property in the same way you used grid-template-columns in the previous challenge.
@@ -142,7 +142,7 @@
             display: grid;
             grid-template-columns: 100px 100px 100px;
             /* Only change code below this line */
-    
+            grid-template-rows: 50px 50px;
     
             /* Only change code above this line */
         }
@@ -202,7 +202,7 @@
             display: grid;
             /* Only change code below this line */
     
-            grid-template-columns: auto 50px 10% 2fr 1fr;
+            grid-template-columns: 1fr 100px 2fr;
     
             /* Only change code above this line */
             grid-template-rows: 50px 50px;
@@ -257,7 +257,7 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             /* Only change code below this line */
-    
+            grid-column-gap: 20px;
     
             /* Only change code above this line */
         }
@@ -307,7 +307,7 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             /* Only change code below this line */
-    
+            grid-row-gap: 5px;
     
             /* Only change code above this line */
         }
@@ -357,7 +357,7 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             /* Only change code below this line */
-    
+            grid-gap: 10px 20px;
     
             /* Only change code above this line */
         }
@@ -369,7 +369,6 @@
         <div class="d4">4</div>
         <div class="d5">5</div>
     </div>
-
     <!-- 8. Use grid-column to Control Spacing
 
     Up to this point, all the properties that have been discussed are for grid containers. The grid-column property is the first one for use on the grid items themselves.
@@ -407,7 +406,7 @@
         .item5 {
             background: PaleGreen;
             /* Only change code below this line */
-    
+            grid-column: 2 / 4;
     
             /* Only change code above this line */
         }
@@ -459,7 +458,7 @@
             background: PaleGreen;
             grid-column: 2 / 4;
             /* Only change code below this line */
-    
+            grid-row: 2/4;
             /* Only change code above this line */
         }
     
@@ -503,7 +502,7 @@
         .item2 {
             background: LightSalmon;
             /* Only change code below this line */
-    
+            justify-self: center;
     
             /* Only change code above this line */
         }
@@ -558,7 +557,7 @@
         .item3 {
             background: PaleTurquoise;
             /* Only change code below this line */
-    
+            align-self: end;
     
             /* Only change code above this line */
         }
@@ -628,7 +627,7 @@
             grid-template-rows: 1fr 1fr 1fr;
             grid-gap: 10px;
             /* Only change code below this line */
-    
+            justify-items: center;
     
             /* Only change code above this line */
         }
@@ -679,7 +678,7 @@
             grid-template-rows: 1fr 1fr 1fr;
             grid-gap: 10px;
             /* Only change code below this line */
-    
+            align-items: end;
     
             /* Only change code above this line */
         }
@@ -740,7 +739,7 @@
                 /* Only change code below this line */
                 "header header header"
                 "advert content content"
-                "advert footer footer";
+                "footer footer footer";
             /* Only change code above this line */
         }
     </style>
@@ -785,7 +784,7 @@
         .item5 {
             background: PaleGreen;
             /* Only change code below this line */
-    
+            grid-area: footer;
     
             /* Only change code above this line */
         }
@@ -847,7 +846,7 @@
         .item5 {
             background: PaleGreen;
             /* Only change code below this line */
-    
+            grid-area: 3/1/4/4;
     
             /* Only change code above this line */
         }
@@ -921,7 +920,7 @@
             display: grid;
             /* Only change code below this line */
     
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
     
             /* Only change code above this line */
             grid-template-rows: 1fr 1fr 1fr;
@@ -976,7 +975,7 @@
             display: grid;
             /* Only change code below this line */
     
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(90px, 1fr));
     
             /* Only change code above this line */
             grid-template-rows: 1fr 1fr 1fr;
@@ -1031,7 +1030,7 @@
             display: grid;
             /* Only change code below this line */
     
-            grid-template-columns: repeat(3, minmax(60px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));    
     
             /* Only change code above this line */
             grid-template-rows: 1fr 1fr 1fr;
@@ -1112,7 +1111,7 @@
             display: grid;
             /* Only change code below this line */
     
-            grid-template-columns: repeat(3, minmax(60px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     
             /* Only change code above this line */
             grid-template-rows: 1fr 1fr 1fr;
@@ -1195,9 +1194,9 @@
             .container {
                 grid-template-areas:
                     /* Only change code below this line */
-                    "advert header"
+                    "header header"
                     "advert content"
-                    "advert footer";
+                    "footer footer";
                 /* Only change code above this line */
             }
         }
@@ -1248,8 +1247,8 @@
             background: PaleTurquoise;
             grid-area: content;
             /* Only change code below this line */
-    
-    
+            display: grid;
+            grid-template-columns: auto 1fr;    
             /* Only change code above this line */
         }
     
